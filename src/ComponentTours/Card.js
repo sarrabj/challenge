@@ -2,14 +2,19 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button'
 
-function KitchenSinkExample({elm}) {
+
+function KitchenSinkExample({el}) {
+ 
+ 
   return (
+  <header  >
+    <div style={{boxShadow:'2px -6px 7px pink',borderRadius:'5px'}} >
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={elm.photo}  />
+      <Card.Img variant="top" src={el.photo}  />
       <Card.Body>
-        <Card.Title>{elm.titre}</Card.Title>
+        <Card.Title>{el.titre}</Card.Title>
         <Card.Text>
-         {elm.description}
+         {el.description}
         </Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
@@ -18,10 +23,14 @@ function KitchenSinkExample({elm}) {
         
       </ListGroup>
       <Card.Body>
-      <Button variant="primary">Delete</Button>
-        <Card.Link href="#">Another Link</Card.Link>
+      <Button style={{backgroundColor:'white',color:'black'}} variant="primary">Delete</Button>
+      <br></br>
+        <Card.Link href="#">More Datails</Card.Link>
       </Card.Body>
-    </Card>
+      </Card>
+      </div>
+    
+    </header>
   );
 }
 
