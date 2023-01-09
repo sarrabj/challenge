@@ -7,9 +7,9 @@ import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-router-dom'
 function First(props) {
     return (
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="light" expand="lg" >
         
-      <Container fluid>
+      <Container fluid  >
         
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -19,15 +19,15 @@ function First(props) {
             navbarScroll
           >
             
-            <Nav.Link>
-              <Link to='/'>Home</Link>
+            <Nav.Link >
+              <Link to='/' style={{textDecoration:'none'}}>Home</Link>
               </Nav.Link>
             
             <Nav.Link > 
-              <Link to='/ourtours'>
+              <Link to='/ourtours'style={{textDecoration:'none'}}>
             Our Tours </Link>
             </Nav.Link>
-            <Nav.Link > <Link to='addnew'>Add New Tour</Link>
+            <Nav.Link > <Link to='/addnew' style={{textDecoration:'none'}}>Add New Tour</Link>
             </Nav.Link>
           
           </Nav>

@@ -4,8 +4,8 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import First from '../ComponentsHome/First';
-
-function Example({handleAddTour}) {
+import {Link} from 'react-router-dom'
+function Example(props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -28,13 +28,14 @@ function Example({handleAddTour}) {
     setInputs({...inputs,[e.target.name]:e.target.value})
   }
   const handleSave=()=>{
-    handleAddTour.handleAddTour(inputs)
+    props.handleAddTour(inputs)
     setInputs(  {photo:'',
     titre:'',
     description:'',
     },)
-    handleClose  () 
+    handleClose  ()
   }
+  
   return (
     <>
     
@@ -50,8 +51,10 @@ function Example({handleAddTour}) {
             <Form.Control
                 type="email"
                 placeholder="Photo"
-                autoFocus
+                name="photo"
                 onChange={handleChange}
+                autoFocus
+                
             />
             
             </Form.Group>
@@ -60,16 +63,20 @@ function Example({handleAddTour}) {
             <Form.Control
                 type="email"
                 placeholder="Titre"
-                autoFocus
+                name="titre"
                 onChange={handleChange}
+                autoFocus
+                
             /> </Form.Group>
              <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Description</Form.Label>
             <Form.Control
                 type="email"
                 placeholder="Description"
-                autoFocus
+                name="description"
                 onChange={handleChange}
+                autoFocus
+                
             /> </Form.Group>
             
             
@@ -77,8 +84,8 @@ function Example({handleAddTour}) {
         </Modal.Body>
         <Modal.Footer>
         
-        <Button variant="primary" onClick={handleSave}>
-           Add New Tour
+        <Button variant="primary" onClick={handleSave} style={{backgroundColor:'white'}}>
+           <Link to='/ourtours' style={{textDecoration:'none'}}> Add New Tour</Link>
         </Button>
         </Modal.Footer>
         </div>

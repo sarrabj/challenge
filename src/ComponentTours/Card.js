@@ -7,7 +7,7 @@ function KitchenSinkExample({el}) {
  
  
   return (
-  <header  >
+  <header>
     <div style={{boxShadow:'2px -6px 7px pink',borderRadius:'5px'}} >
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={el.photo}  />
@@ -25,7 +25,7 @@ function KitchenSinkExample({el}) {
       <Card.Body>
       <Button style={{backgroundColor:'white',color:'black'}} variant="primary">Delete</Button>
       <br></br>
-        <Card.Link href="#">More Datails</Card.Link>
+        <Card.Link style={{textDecoration:'none'}}>More Details</Card.Link>
       </Card.Body>
       </Card>
       </div>
