@@ -39,7 +39,6 @@ function Example(props) {
   return (
     <>
     
-<First/>
 <Button onClick={goBack}style={{backgroundColor:'white',color:'red',borderColor:'red'}}  >Retour page Home</Button>
         <div style={{display:'flex', flexDirection:'column',margin:'50px',width:'500px'}}>
         <Modal.Header closeButton>

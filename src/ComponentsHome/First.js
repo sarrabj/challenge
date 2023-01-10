@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-router-dom'
-function First(props) {
+function First() {
     return (
       <Navbar bg="light" expand="lg" >
         
@@ -31,16 +31,7 @@ function First(props) {
             </Nav.Link>
           
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-              onChange={(e)=>props.handleSearch(e.target.value)}
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+         
         </Navbar.Collapse>
       </Container>
       

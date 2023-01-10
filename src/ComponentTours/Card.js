@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Button from 'react-bootstrap/Button'
-
+import {Link} from 'react-router-dom'
 
 function KitchenSinkExample({el}) {
  
@@ -25,7 +25,7 @@ function KitchenSinkExample({el}) {
       <Card.Body>
       <Button style={{backgroundColor:'white',color:'black'}} variant="primary">Delete</Button>
       <br></br>
-        <Card.Link style={{textDecoration:'none'}}>More Details</Card.Link>
+        <Card.Link style={{textDecoration:'none'}} ><Link to ={`/details/${el.id}`}>More Details</Link>  </Card.Link>
       </Card.Body>
       </Card>
       </div>
